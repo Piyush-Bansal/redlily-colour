@@ -19,7 +19,7 @@
   }}
   tabindex="0"
 >
-  <div class="swatch__colour" style:background-color={colourName}></div>
+  <div class="swatch__colour" style:background-color={colourHex}></div>
   <div class="colour-name"><p>{colourName}</p></div>
 </div>
 
