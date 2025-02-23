@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CircularSwatch from "./CircularSwatch.svelte";
+  import CircularSwatch from "$lib/components/CircularSwatch.svelte";
 
   type Colour = {
     colourName: string;
@@ -23,11 +23,12 @@
 <style>
   .colour-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 10px;
     place-content: center;
+    justify-content: center;
     height: 100vh;
     margin-inline: auto;
-    max-width: 60vw;
+    max-width: 97vw;
   }
 </style>

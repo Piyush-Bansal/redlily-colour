@@ -1,5 +1,5 @@
 <script>
-  import { copy } from "./copy.svelte";
+  import { copy } from "../helper_functions/copy.svelte";
   import { setToast } from "./toastState.svelte";
 
   let { colourName = "colour name", colourHex = "#ffffff" } = $props();
@@ -29,7 +29,7 @@
     flex-direction: column;
     row-gap: 10px;
     justify-content: center;
-    max-width: 100px;
+
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
   }
