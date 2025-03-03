@@ -1,5 +1,5 @@
 <script>
-  import ColourSwatches from "$lib/components/ColourSwatches.svelte";
+  import Swatches from "$lib/components/Swatches.svelte";
   import Toast from "$lib/components/Toast.svelte";
 
   const colours = [
@@ -166,5 +166,5 @@
   ];
 </script>
 
-<ColourSwatches {colours}></ColourSwatches>
+<Swatches {colours}></Swatches>
 <Toast></Toast>
