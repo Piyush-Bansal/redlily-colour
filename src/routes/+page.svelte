@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
   import Swatches from "$lib/components/Swatches.svelte";
   import Toast from "$lib/components/Toast.svelte";
+  import type { Colours } from "$lib/types/typeDefinitions";
+  import "$lib/main.css";
 
-  const colours = [
+  const colours: Colours = [
     {
       colourName: "Carmine red",
       colourHex: "#910917",
@@ -68,13 +70,11 @@
       colourHex: "#536298",
       subColor: [
         { colour: "Blue 0", code: "#708ee6" },
-        { colour: "Blue 1", code: "#708adb" },
-        { colour: "Blue 2", code: "#667cc2" },
-        { colour: "Blue 3", code: "#536298" },
-        { colour: "Blue 4", code: "#3a4266" },
-        { colour: "Blue 5", code: "#23273d" },
-        { colour: "Blue 6", code: "#141623" },
-        { colour: "Blue 7", code: "#0f0f19" },
+        { colour: "Blue 1", code: "#667cc2" },
+        { colour: "Blue 2", code: "#536298" },
+        { colour: "Blue 3", code: "#3a4266" },
+        { colour: "Blue 4", code: "#141623" },
+        { colour: "Blue 5", code: "#0f0f19" },
       ],
     },
     {
@@ -117,14 +117,12 @@
       colourName: "Mocha",
       colourHex: "#6E3C07",
       subColor: [
-        [
-          { colour: "Mocha 0", code: "#ed8c47" },
-          { colour: "Mocha 1", code: "#be6c2d" },
-          { colour: "Mocha 2", code: "#915016" },
-          { colour: "Mocha 3", code: "#6e3c07" },
-          { colour: "Mocha 4", code: "#55310a" },
-          { colour: "Mocha 5", code: "#4a2d0f" },
-        ],
+        { colour: "Mocha 0", code: "#ed8c47" },
+        { colour: "Mocha 1", code: "#be6c2d" },
+        { colour: "Mocha 2", code: "#915016" },
+        { colour: "Mocha 3", code: "#6e3c07" },
+        { colour: "Mocha 4", code: "#55310a" },
+        { colour: "Mocha 5", code: "#4a2d0f" },
       ],
     },
     {

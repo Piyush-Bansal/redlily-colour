@@ -1,34 +1,43 @@
 <script lang="ts">
-  import CircularSwatch from "$lib/components/CircularSwatch.svelte";
+  import type { Colours } from "$lib/types/typeDefinitions";
+  import SwatchCard from "./SwatchCard.svelte";
 
-  type Colour = {
-    colourName: string;
-    colourHex: string;
+  type Parameters = {
+    colours: Colours;
   };
 
-  interface Props {
-    colours: Colour[];
-  }
-
-  let { colours }: Props = $props();
+  let { colours }: Parameters = $props();
 </script>
 
-<div class="colour-grid">
-  {#each colours as colour (crypto.randomUUID())}
-    <CircularSwatch colourName={colour.colourName} colourHex={colour.colourHex}
-    ></CircularSwatch>
-  {/each}
+<div class="wrapper">
+  <div class="swatch__cards">
+    {#each colours as colour}
+      <div class="swatch">
+        <SwatchCard subColours={colour.subColor}></SwatchCard>
+      </div>
+    {/each}
+  </div>
 </div>
 
-<style>
-  .colour-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 10px;
-    place-content: center;
-    justify-content: center;
-    height: 100vh;
+<style lang="scss">
+  .swatch {
+    &__cards {
+      display: flex;
+      flex-direction: row;
+    }
+    transition: margin-left 0.3s ease-in-out;
+
+    &:not(:first-child) {
+      margin-left: -9.8%;
+    }
+    &:hover + .swatch {
+      margin-left: 0;
+    }
+  }
+
+  .wrapper {
+    width: 90vw;
     margin-inline: auto;
-    max-width: 97vw;
+    overflow-x: hidden;
   }
 </style>
