@@ -10,3 +10,7 @@ export interface Colour {
 }
 
 export type Colours = Colour[];
+
+export type CurrentSwatch = {
+  current: null | string;
+};

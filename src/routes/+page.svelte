@@ -6,7 +6,7 @@
 
   const colours: Colours = [
     {
-      colourName: "Carmine red",
+      colourName: "Red",
       colourHex: "#910917",
       subColor: [
         { colour: "Red 0", code: "#fa7d7d" },
@@ -164,5 +164,10 @@
   ];
 </script>
 
+<svelte:head>
+  <title>Redlily Colours</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/x-icon" href="/01-favicon.png" />
+</svelte:head>
 <Swatches {colours}></Swatches>
 <Toast></Toast>
