@@ -16,7 +16,7 @@
 
   let { subColour }: Props = $props();
   let contrastCheck =
-    colorContrast(subColour.code, "#000000") > 4.5 ? true : false;
+    colorContrast(subColour.code, "#131217") > 4.5 ? true : false;
 </script>
 
 <div
@@ -32,7 +32,7 @@
     setToast.checkToast(
       `${subColour.colour} copied`,
       subColour.code,
-      contrastCheck ? "black" : "white"
+      contrastCheck ? "#131217" : "white"
     );
   }}
   onkeydown={(e) => {
@@ -41,7 +41,7 @@
       setToast.checkToast(
         `${subColour.colour} copied`,
         subColour.code,
-        contrastCheck ? "black" : "white"
+        contrastCheck ? "#131217" : "white"
       );
     }
   }}

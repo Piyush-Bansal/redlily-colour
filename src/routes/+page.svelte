@@ -167,7 +167,7 @@
 <svelte:head>
   <title>Redlily Colours</title>
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/x-icon" href="/01-favicon.png" />
+  <link rel="icon" href="/favicon.svg" />
 </svelte:head>
 <Swatches {colours}></Swatches>
 <Toast></Toast>
